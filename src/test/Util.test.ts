@@ -8,6 +8,10 @@ describe("Util test suite", () => {
       sut = new StringUtils();
     });
 
+    afterEach(() => {
+      console.log("teardown...");
+    });
+
     it("Should return correct uppercase", () => {
       const actual = sut.toUpperCase("abc");
       expect(actual).toBe("ABC");
